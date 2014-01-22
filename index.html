@@ -5,30 +5,30 @@
 <title>MS</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-
-<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
-
-
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function()
-        {
-        $("#boton").click(function () {     
-            $('#target').toggle("fast");
-            });
-         });
+$(document).ready(function(){  
+    $('.tab').toggle(
+        function () {
+                $( ".social_panel" ).animate({ right: '0px' });
+            },
+        function () {
+                $( ".social_panel" ).animate({ right: '-644px' });
+            }
+        );
+});
 </script>
 
-<input id="boton" type="button" value="toggle()">
-
- <div href="#" id="target" class="social_panel">
- 	<!-- <div class="container">
- 		<div class="sup-nav-bar">
- 			<title >MS Message</title>
- 		</div>
- 	</div>-->
- </div>
+ <div href="#" class="social_panel">
+ 	<div class="tab"></div> <!-- end tab for open and close social_panel -->
+ 	<div class="container">
+ 		<div class="sup-nav-bar"><p class="app-title">MS Message</p></div> <!-- end sup-nav-bar -->
+ 		<div class="user-bar"><p class="user-info">User name info</p></div> <!-- end user-info -->
+	 		<p class="triangle-right">Test right.<br>Second line.</p> <!-- end triangle-right -->
+	 		<p class="triangle-left">Test left.<br>Second line.</p> <!-- end triangle-left -->
+ 	</div> <!-- end container -->
+ </div> <!-- end social_panel -->
 
 </body>
 </html>
