@@ -10,21 +10,24 @@
 
 <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-	$( ".social_panel" ).click(function() {
-	  $( ".social_panel" ).animate({ right: '0px' });
-	});
 
-});
+<script type="text/javascript">
+    $(document).ready(function()
+        {
+        $("#boton").click(function () {     
+            $('#target').toggle("fast");
+            });
+         });
 </script>
 
- <div href="#" class="social_panel">
- 	<div class="container">
+<input id="boton" type="button" value="toggle()">
+
+ <div href="#" id="target" class="social_panel">
+ 	<!-- <div class="container">
  		<div class="sup-nav-bar">
  			<title >MS Message</title>
  		</div>
- 	</div>
+ 	</div>-->
  </div>
 
 </body>

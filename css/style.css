@@ -413,15 +413,25 @@ font-size:14px;}
 /* Social Panel */
 
 .social_panel {
-	display:none;
     background: url("../images/back_social.png") repeat scroll right top transparent; 
     display: block;
     height: 480px;
     width: 685px;
     overflow: hidden;
     position: fixed;
-    right: -644px;
+    /*right: -644px;*/
+    right: 0px;
     top: 38px;
+}
+
+.tab {
+	display: block;
+	width: 45px;
+	height: 100%;
+    right: 200px;
+    top: 0px;
+	background: url("../images/tab.png") repeat scroll right top transparent; 
+
 }
 
 .container {
