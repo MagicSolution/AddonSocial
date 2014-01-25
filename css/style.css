@@ -559,7 +559,7 @@ font-size:14px;}
 
 #sidemenu li a.open {
   background: #426A87 !important;
-  opacity: 100 !important;  
+  opacity: 0.9 !important;  
 }
 
 /* cambio de menus */
