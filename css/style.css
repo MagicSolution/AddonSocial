@@ -533,16 +533,16 @@ font-size:14px;}
 
 /* Menu Right */
 
-.left-menu {
+#sidemenu ul {
   margin: 0px 0px 0px 0px;
   padding: 20px 0px 0px 21px;
   width: 57px;
   float: left;
   position: relative;
-
 }
 
-.left-menu li {
+
+#sidemenu li a {
   padding: 8px 0px 0px 5px;
   float: right;
   list-style-type: none;
@@ -557,7 +557,17 @@ font-size:14px;}
   cursor: pointer;
 }
 
-.left-menu li#active {
+#sidemenu li a.open {
   background: #426A87 !important;
-  opacity: 1 !important;
+  opacity: 100 !important;  
+}
+
+/* cambio de menus */
+
+.contentblock {
+  display: block;
+}
+
+.contentblock.hidden {
+  display: none;
 }

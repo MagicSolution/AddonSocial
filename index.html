@@ -7,35 +7,81 @@
 </head>
 <body>
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){  
-    $('.tab').toggle(
-        function () {
-                $( ".social_panel" ).animate({ right: '0px' });
-            },
-        function () {
-                $( ".social_panel" ).animate({ right: '-644px' });
-            }
-        );
-});
-</script>
 
  <div href="#" class="social_panel">
  	<div class="tab"></div> <!-- end tab for open and close social_panel -->
-        <ul class="left-menu">
-        <li id="active"><a href="#"><img src="images/message_icon_active.png"></a></li>
-        <li><a href="#"><img src="images/eye_icon.png"></a></li>
-        <li><a href="#"><img src="images/todolist_icon.png"></a></li>
-        <li><a href="#"><img src="images/share_icon.png"></a></li>
-        <li><a href="#"><img src="images/blog_icon.png"></a></li>
-    </ul>
+        <ul id="sidemenu" style="margin: 0px 0px 0px 0px;padding: 20px 0px 0px 21px;width: 57px;float: left;position: relative; list-style-type: none;">
+            <li><a href="#ms-message" class="open"><img src="images/message_icon_active.png"></a></li>
+            <li><a href="#ms-eye"><img src="images/eye_icon.png"></a></li>
+            <li><a href="#ms-todolist"><img src="images/todolist_icon.png"></a></li>
+            <li><a href="#ms-share"><img src="images/share_icon.png"></a></li>
+            <li><a href="#ms-blog"><img src="images/blog_icon.png"></a></li>
+        </ul>
     <div class="container">
- 		<div class="sup-nav-bar"><p class="app-title">MS Message</p></div> <!-- end sup-nav-bar -->
- 		<div class="user-bar"><p class="user-info">User name info</p></div> <!-- end user-info -->
-	 		<p class="triangle-right">Test right.<br>Second line.</p> <!-- end triangle-right -->
-	 		<p class="triangle-left">Test left.<br>Second line.</p> <!-- end triangle-left -->
+ 		<div id="ms-message" class="contentblock">
+            <div class="sup-nav-bar"><p class="app-title">MS Message</p></div> <!-- end sup-nav-bar -->
+     		<div class="user-bar"><p class="user-info">User name info</p></div> <!-- end user-info -->
+    	 		<p class="triangle-right">Test right.<br>Second line.</p> <!-- end triangle-right -->
+    	 		<p class="triangle-left">Test left.<br>Second line.</p> <!-- end triangle-left -->
+        </div><!-- end ms-message -->
+
+        <div id="ms-eye" class="contentblock hidden">
+            <div class="sup-nav-bar"><p class="app-title">MS Eye</p></div> <!-- end sup-nav-bar -->
+            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
+        </div><!-- end ms-message -->
+
+        <div id="ms-todolist" class="contentblock hidden">
+            <div class="sup-nav-bar"><p class="app-title">MS Todo List</p></div> <!-- end sup-nav-bar -->
+            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
+        </div><!-- end ms-message -->
+
+        <div id="ms-share" class="contentblock hidden">
+            <div class="sup-nav-bar"><p class="app-title">MS Share</p></div> <!-- end sup-nav-bar -->
+            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
+        </div><!-- end ms-message -->
+
+        <div id="ms-blog" class="contentblock hidden">
+            <div class="sup-nav-bar"><p class="app-title">MS Blog</p></div> <!-- end sup-nav-bar -->
+            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
+        </div><!-- end ms-message -->
+
  	</div> <!-- end container -->
  </div> <!-- end social_panel -->
+<script type="text/javascript">
+    $(document).ready(function(){  
+        $('.tab').toggle(
+            function () {
+                    $( ".social_panel" ).animate({ right: '0px' });
+                },
+            function () {
+                    $( ".social_panel" ).animate({ right: '-644px' });
+                }
+            );
+    });
+</script> 
+ <script type="text/javascript">
+    $(function(){
+      $('#sidemenu a').on('click', function(e){
+        e.preventDefault();
+
+        if($(this).hasClass('open')) {
+          // do nothing because the link is already open
+        } else {
+          var oldcontent = $('#sidemenu a.open').attr('href');
+          var newcontent = $(this).attr('href');
+          
+          $(oldcontent).fadeOut('fast', function(){
+            $(newcontent).fadeIn().removeClass('hidden');
+            $(oldcontent).addClass('hidden');
+          });
+          
+         
+          $('#sidemenu a').removeClass('open');
+          $(this).addClass('open');
+        }
+      });
+    });
+</script>
 
 </body>
 </html>
