@@ -31,10 +31,10 @@
                     <ul>
                         <li><a href="#"><img src="images/time_icon.png"></a></li>
                         <li><a href="#"><img src="images/star_icon.png"></a></li>
-                        <!-- <li class="separator-left"><a href="#"><img src="images/menu_icon.png"></a></li>
-                        <li class="separator-right"><a href="#"><img src="images/location_icon.png"></a></li>
+                        <li class="separator-left"><a href="#"><img src="images/menu_icon.png"></a></li>
+                        <li class="separator-right" id="buscar"><a href="#"><img src="images/location_icon.png"></a></li>
                         <li><a href="#"><img src="images/window_icon.png"></a></li>
-                        <li><a href="#"><img src="images/minimize_icon.png"></a></li> -->
+                        <li><a href="#"><img src="images/minimize_icon.png"></a></li>
                     </ul>
                     <input type="text" id="search" />
                 </div><!-- chat-icon-bar -->
@@ -81,6 +81,10 @@
             {
                  source:data
             })
+        });
+        $('#search').hide();
+        $("#buscar").click(function () {     
+            $('#search').toggle("fast");
         });
     });
 </script> 
@@ -146,17 +150,23 @@ $(function() {
     {
         source:data,
         select: function( event, ui ) {
-            $( "#search" ).val( ui.item.label + " / " + ui.item.recapiti );
+            $( "#search" ).val( ui.item.label + " / " + ui.item.pv );
             return false;
         }
     }).data( "autocomplete" )._renderItem = function( ul, item ) {
         return $( "<li></li>" )
             .data( "item.autocomplete", item )
-            .append( "<a><strong>" + item.label + "</strong> / " + item.recapiti + "</a>" )
+            .append( "<a><strong>" + item.label + "</strong> / " + item.pv + "</a>" )
             .appendTo( ul );
         };      
 
 });
+</script>
+<script type="text/javascript">
+    $(document).ready(function()
+        {
+
+         });
 </script>
 
 

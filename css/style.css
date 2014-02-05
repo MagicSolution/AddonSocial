@@ -544,7 +544,9 @@ font-size:14px;}
   z-index: 9999;
   margin: 0px 5px 0px 0px;
   float: right;
-  position: relative;
+  position: absolute;
+  top: 52px;
+  right: 0px;
 }
 
 .ui-helper-hidden-accessible { display:none; }
@@ -594,7 +596,7 @@ font-size:14px;}
 .chat-icon-bar {
   float: right;
   position: relative;
-  width: 300px;
+  width: 250px;
 }
 
 .chat-icon-bar ul {
