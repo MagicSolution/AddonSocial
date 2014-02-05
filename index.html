@@ -4,15 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>MS</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>
 
 <link href="css/jquery/jquery-ui.min" rel="stylesheet" type="text/css" />
 <link href="css/jquery/jquery.ui.core.min" rel="stylesheet" type="text/css" />
 <link href="css/jquery/jquery.ui.menu.min" rel="stylesheet" type="text/css" />
 
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/jquery/jquery.ui.core.min.js"></script>
+<script src="js/jquery/jquery.ui.widget.min.js"></script>
+<script src="js/jquery/jquery.ui.position.min.js"></script>
+<script src="js/jquery/jquery.ui.menu.min.js"></script>
+<script src="js/jquery/jquery.ui.autocomplete.min.js"></script>
 
 </head>
 <body>
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
  <div href="#" class="social_panel">
  	<div class="tab"></div> <!-- end tab for open and close social_panel -->
@@ -66,8 +72,10 @@
         </div><!-- end ms-message -->
  	</div> <!-- end container -->
  </div> <!-- end social_panel -->
+
 <script type="text/javascript">
-    $(document).ready(function(){  
+    $(document).ready(function(){
+        // social panel open & close  
         $('.tab').toggle(
             function () {
                     $( ".social_panel" ).animate({ right: '0px' });
@@ -76,21 +84,8 @@
                     $( ".social_panel" ).animate({ right: '-644px' });
                 }
             );
-        $(function() {
-            $( "#search" ).autocomplete(
-            {
-                 source:data
-            })
-        });
-        $('#search').hide();
-        $("#buscar").click(function () {     
-            $('#search').toggle("fast");
-        });
-    });
-</script> 
- <script type="text/javascript">
-    $(function(){
-      $('#sidemenu a').on('click', function(e){
+        // apps right menu functions
+        $('#sidemenu a').on('click', function(e){
         e.preventDefault();
 
         if($(this).hasClass('open')) {
@@ -108,17 +103,28 @@
           $('#sidemenu a').removeClass('open');
           $(this).addClass('open');
         }
-      });
+        });
+        // search input show & hide
+        $('#search').hide();
+        $("#buscar").click(function () {     
+            $('#search').toggle("fast");
+        });
+        // search functions
+        $( "#search" ).autocomplete(
+        {
+            source:data,
+            select: function( event, ui ) {
+                $( "#search" ).val( ui.item.label + " / " + ui.item.pv );
+                return false;
+            }
+        }).data( "autocomplete" )._renderItem = function( ul, item ) {
+            return $( "<li></li>" )
+                .data( "item.autocomplete", item )
+                .append( "<a><strong>" + item.label + "</strong> / " + item.pv + "</a>" )
+                .appendTo( ul );
+        };  
     });
-</script>
-
-<script src="js/jquery/jquery.ui.core.min.js"></script>
-<script src="js/jquery/jquery.ui.widget.min.js"></script>
-<script src="js/jquery/jquery.ui.position.min.js"></script>
-<script src="js/jquery/jquery.ui.menu.min.js"></script>
-<script src="js/jquery/jquery.ui.autocomplete.min.js"></script>
-
-<link rel="stylesheet" href="js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>
+</script> 
 
 <script>
 var data = [
@@ -142,35 +148,6 @@ var data = [
             }
         }
         ];
-
-
-$(function() {
-
-    $( "#search" ).autocomplete(
-    {
-        source:data,
-        select: function( event, ui ) {
-            $( "#search" ).val( ui.item.label + " / " + ui.item.pv );
-            return false;
-        }
-    }).data( "autocomplete" )._renderItem = function( ul, item ) {
-        return $( "<li></li>" )
-            .data( "item.autocomplete", item )
-            .append( "<a><strong>" + item.label + "</strong> / " + item.pv + "</a>" )
-            .appendTo( ul );
-        };      
-
-});
 </script>
-<script type="text/javascript">
-    $(document).ready(function()
-        {
-
-         });
-</script>
-
-
-
-
 </body>
 </html>
