@@ -100,7 +100,13 @@
         // 3. This is an example of how you could use the new class 'Ventana'
         var myVentana = new Ventana();
             myVentana.openWith('Friends');
-
+        
+        // dat.gui stuff
+        var gui = new dat.GUI();
+        gui.add(myVentana, 'open');
+        gui.add(myVentana, 'close');
+        
+        
         // social panel open & close  
         $('.tab').toggle(
             function () {
@@ -150,11 +156,6 @@
                 .appendTo( ul );
         };
         
-        
-        // dat.gui stuff
-        var gui = new dat.GUI();
-        gui.add(myVentana, 'open');
-        gui.add(myVentana, 'close');
     });
 </script> 
 
