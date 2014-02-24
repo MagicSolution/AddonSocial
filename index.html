@@ -4,17 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>MS</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<<<<<<< HEAD
 <link rel="stylesheet" href="js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>
-=======
-<!--<link rel="stylesheet" href="js/jquery/smoothness/jquery-ui-1.8.16.custom.css"/>-->
-
->>>>>>> 0bbea5fe0abae6b7f43d793167acc048b5d893ff
 
 <link href="css/jquery/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery/jquery.ui.core.min.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery/jquery.ui.menu.min.css" rel="stylesheet" type="text/css" />
-<<<<<<< HEAD
 <link href="js/pengoworks/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
 
 <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -24,17 +18,6 @@
 <script src="js/jquery/jquery.ui.menu.min.js"></script>
 <script src="js/pengoworks/jquery.autocomplete.js"></script>
 
-=======
-
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="dat.gui.min.js"></script>
-<script type='text/javascript' src="js/jquery/jquery.ui.core.min.js"></script>
-<script type='text/javascript' src="js/jquery/jquery.ui.widget.min.js"></script>
-<script type='text/javascript' src="js/jquery/jquery.ui.position.min.js"></script>
-<script type='text/javascript' src="js/jquery/jquery.ui.menu.min.js"></script>
-<script type='text/javascript' src="js/jquery/jquery.ui.autocomplete.min.js"></script>
-
->>>>>>> 0bbea5fe0abae6b7f43d793167acc048b5d893ff
 </head>
 <body>
  <div href="#" class="social_panel">
@@ -78,50 +61,6 @@
             <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
         </div><!-- end ms-message -->
 
-<<<<<<< HEAD
-=======
- <div href="#" class="social_panel">
- 	<div class="tab"></div> <!-- end tab for open and close social_panel -->
-        <ul id="sidemenu" style="margin: 0px 0px 0px 0px;padding: 20px 0px 0px 21px;width: 57px;float: left;position: relative; list-style-type: none;">
-            <li><a href="#ms-message" class="open"><img src="images/message_icon_active.png"></a></li>
-            <li><a href="#ms-eye"><img src="images/eye_icon.png"></a></li>
-            <li><a href="#ms-todolist"><img src="images/todolist_icon.png"></a></li>
-            <li><a href="#ms-share"><img src="images/share_icon.png"></a></li>
-            <li><a href="#ms-blog"><img src="images/blog_icon.png"></a></li>
-        </ul>
-    <div class="container">
- 		<div id="ms-message" class="contentblock">
-            <div class="sup-nav-bar">
-                <p class="app-title">MS Message</p>
-                <div class="chat-icon-bar">
-                    <ul>
-                        <li><a href="#"><img src="images/time_icon.png"></a></li>
-                        <li><a href="#"><img src="images/star_icon.png"></a></li>
-                        <li class="separator-left"><a href="#"><img src="images/menu_icon.png"></a></li>
-                        <li class="separator-right" id="buscar"><a href="#"><img src="images/location_icon.png"></a></li>
-                        <li><a href="#"><img src="images/window_icon.png"></a></li>
-                        <li><a href="#"><img src="images/minimize_icon.png"></a></li>
-                    </ul>
-                    <input type="text" id="search" />
-                </div><!-- chat-icon-bar -->
-                <div class="search-box"></div>
-            </div> <!-- end sup-nav-bar -->
-     		<div class="user-bar"><img src="images/user-avatar.png" class="user-avatar"><p class="user-info">User name info</p></div> <!-- end user-info -->
-    	 		<p class="triangle-right">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.  Morbi non tortor id orci iaculis luctus.</p> <!-- end triangle-right -->
-    	 		<p class="triangle-left">Test left.<br>Second line.</p> <!-- end triangle-left -->
-        </div><!-- end ms-message -->
-
-        <div id="ms-eye" class="contentblock hidden">
-            <div class="sup-nav-bar"><p class="app-title">MS Eye</p></div> <!-- end sup-nav-bar -->
-            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
-        </div><!-- end ms-message -->
-
-        <div id="ms-todolist" class="contentblock hidden">
-            <div class="sup-nav-bar"><p class="app-title">MS Todo List</p></div> <!-- end sup-nav-bar -->
-            <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
-        </div><!-- end ms-message -->
-
->>>>>>> 0bbea5fe0abae6b7f43d793167acc048b5d893ff
         <div id="ms-share" class="contentblock hidden">
             <div class="sup-nav-bar"><p class="app-title">MS Share</p></div> <!-- end sup-nav-bar -->
             <div class="user-bar"><p class="user-info">...</p></div> <!-- end user-info -->
@@ -135,7 +74,6 @@
  </div> <!-- end social_panel -->
 
 <script type="text/javascript">
-<<<<<<< HEAD
 $(document).ready(function() {
 	// Social Panel open & close  
 	$('.tab').toggle(
@@ -194,113 +132,6 @@ $(document).ready(function() {
 	});
 
 });
-=======
-    $(document).ready(function(){
-
-        // 1. Let's create a new class (this is also the constructor)
-        var Ventana = function() {
-            this.currentModule = null;
-            this.lastModuleUsed = null;
-        }
-        // 2. Now let's add some methods to this new class
-        Ventana.prototype.init = function() {
-            // Add initialization code here
-        }
-        Ventana.prototype.open = function() {
-            console.log("Ventana::open " + this.lastModuleUsed);
-        }
-        Ventana.prototype.openWith = function(module) {
-            console.log("Ventana::openWith " + module);
-        }
-        Ventana.prototype.close = function() {
-            console.log("Ventana::close " + this.currentModule);
-        }
-
-        // 3. This is an example of how you could use the new class 'Ventana'
-        var myVentana = new Ventana();
-            myVentana.openWith('Friends');
-        
-        // dat.gui stuff
-        var gui = new dat.GUI();
-        gui.add(myVentana, 'open');
-        gui.add(myVentana, 'close');
-        
-        
-        // social panel open & close  
-        $('.tab').toggle(
-            function () {
-                    $( ".social_panel" ).animate({ right: '0px' });
-                },
-            function () {
-                    $( ".social_panel" ).animate({ right: '-644px' });
-                }
-            );
-        // apps right menu functions
-        $('#sidemenu a').on('click', function(e){
-        e.preventDefault();
-
-        if($(this).hasClass('open')) {
-          // do nothing because the link is already open
-        } else {
-          var oldcontent = $('#sidemenu a.open').attr('href');
-          var newcontent = $(this).attr('href');
-          
-          $(oldcontent).fadeOut('fast', function(){
-            $(newcontent).fadeIn().removeClass('hidden');
-            $(oldcontent).addClass('hidden');
-          });
-          
-         
-          $('#sidemenu a').removeClass('open');
-          $(this).addClass('open');
-        }
-        });
-        // search input show & hide
-        $('#search').hide();
-        $("#buscar").click(function () {     
-            $('#search').toggle("fast");
-        });
-        // search functions
-        $( "#search" ).autocomplete(
-        {
-            source:data,
-            select: function( event, ui ) {
-                $( "#search" ).val( ui.item.label + " / " + ui.item.pv );
-                return false;
-            }
-        }).data( "autocomplete" )._renderItem = function( ul, item ) {
-            return $( "<li></li>" )
-                .data( "item.autocomplete", item )
-                .append( "<a><strong>" + item.label + "</strong> / " + item.pv + "</a>" )
-                .appendTo( ul );
-        };
-        
-    });
-</script> 
-
-<script>
-var data = [
-        {
-            "label": "Mariano",
-            "pv": "PV002",
-            "luogo": "Europa.Italia.Campania.Napoli",
-            "recapiti": {
-                "tel": "08112345678",
-                "mail": "loremIpsum@pv002.net",
-                "skype": "lopsum"
-            }
-        },
-        {
-            "label": "PV base",
-            "pv": "PV001",
-            "luogo": "Europa.Italia.Lazio.Roma",
-            "recapiti": {
-                "tel": "0687654321",
-                "mail": "pvbase@pv001.net"
-            }
-        }
-        ];
->>>>>>> 0bbea5fe0abae6b7f43d793167acc048b5d893ff
 </script>
 </body>
 </html>
